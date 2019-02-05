@@ -1,6 +1,6 @@
 module.exports = function ExitCommand(mod) {
     
     mod.command.add(['exit', 'quit'], () => {
-        mod.send('C_EXIT', 1, {});
+        mod.toClient('S_EXIT', 3, { category: 0, code: 0 });
     });
 }
